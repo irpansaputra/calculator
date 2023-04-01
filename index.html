@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple cacl</title>
+	<!--styling-->
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: Arial, Helvetica, sans-serif;
+
+			}
+			body{
+				background: blueviolet;
+			}
+
+			.irpan_saputra{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.irpan_saputra{
+				text-align: ;
+				text-transform: uppercase;
+				color: black ;
+				text-decoration: blink;
+
+			}
+			.Calculator{center
+				background: #E95F0B;
+				padding: 10px;
+
+			}
+			.textdisplay{
+				width: 200px;
+				padding: 5px;
+				font-weight: bold;
+				font-size: 22px;
+				border-radius: 3px;
+				box-shadow: 0px 0px 5px rgba(71, 3, 71, 0.867);
+			}
+			.button{
+				width: 50px;
+				height: 50px;
+				font-size: 22px;
+				margin: 1px;
+				border-radius: 5px;
+				box-shadow: 0px 0px 5px #e191db;
+				cursor: pointer;
+			}
+			.button:hover{
+				background: #2547f1;
+				box-shadow: 0px 0px 5px #4b3249;
+			}
+		</style>
+		<!--javascript function-->
+		<script type="text/javascript">
+			function add(num){
+				document.form.textdisplay.value = document.form.textdisplay.value+num;
+			}
+			function Clear(){
+            document.form.textdisplay.value = "";
+        	}
+        	function del() {
+            var nilai = document.form.textdisplay.value;
+            document.form.textdisplay.value = nilai.substring(0, nilai.length - 1);
+        	}
+        	 function equal() {
+            var nilai = document.form.textdisplay.value;
+            document.form.textdisplay.value = eval(nilai);
+       		}
+
+		</script>
+</head>
+<body>
+	<div class="irpan_saputra">
+	<h2>IRPAN_SAPUTRA</h2>
+	<hr>
+	<br>
+	  <div class="Calculator">
+	  	<form name="form">
+	  		<input type="text" class="textdisplay" name="textdisplay">
+	  		<table>
+	  			<tr>
+	  				<td><input type="button" class="button" value="C" onclick="Clear()"></td>
+	  				<td><input type="button" class="button" value="Del" onclick="del()"></td>
+	  				<td><input type="button" class="button" value="/" onclick="add('/')"></td>
+	  				<td><input type="button" class="button" value="*" onclick="add('*')"></td>
+	  			</tr>
+  				<tr>
+	  				<td><input type="button" class="button" value="7" onclick="add(7)"></td>
+	  				<td><input type="button" class="button" value="8" onclick="add(8)"></td>
+	  				<td><input type="button" class="button" value="9" onclick="add(9)"></td>
+	  				<td><input type="button" class="button" value="-" onclick="add('-')"></td>
+	  			</tr>
+	  			<tr>
+	  				<td><input type="button" class="button" value="4" onclick="add(4)"></td>
+	  				<td><input type="button" class="button" value="5" onclick="add(5)"></td>
+	  				<td><input type="button" class="button" value="6" onclick="add(6)"></td>
+	  				<td><input type="button" class="button" value="+" onclick="add('+')"></td>
+	  			</tr>
+				<tr>
+	  				<td><input type="button" class="button" value="1" onclick="add(1)"></td>
+	  				<td><input type="button" class="button" value="2" onclick="add(2)"></td>
+	  				<td><input type="button" class="button" value="3" onclick="add(3)"></td>
+	  				<td rowspan=2><input style="height:106px;" type="button" class="button" value="=" onclick="equal()"></td>
+	  			</tr>
+	  			<tr>
+	  				<td><input type="button" class="button" value="0" onclick="add(0)"></td>
+	  				<td><input type="button" class="button" value="." onclick="add('.')"></td>
+	  				<td><input type="button" class="button" value="00" onclick="add('00')"></td>
+	  			</tr>
+	  		</table>
+	  		
+	  	</form>
+	  </div>
+	  </div>
+</body>
+</html>
